@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <description>The 'Learn JUnit' Course: Advanced JUnit Assertions</description>
+    <name>advanced-junit-assertions</name>
+
+    <groupId>com.baeldung</groupId>
+    <artifactId>lju-advanced-junit-assertions</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>exceptions-start</module>
+        <module>exceptions-end</module>
+        <module>advanced-assertions-hamcrest-start</module>
+        <module>advanced-assertions-hamcrest-end</module>
+        <module>advanced-assertions-assertj-start</module>
+        <module>advanced-assertions-assertj-end</module>
+    </modules>
+</project>
