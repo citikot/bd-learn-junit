@@ -18,12 +18,6 @@
         <module>mocking-end</module>
         <module>junit-assertions-start</module>
         <module>junit-assertions-end</module>
-        <module>exceptions-start</module>
-        <module>exceptions-end</module>
-        <module>advanced-assertions-hamcrest-start</module>
-        <module>advanced-assertions-hamcrest-end</module>
-        <module>advanced-assertions-assertj-start</module>
-        <module>advanced-assertions-assertj-end</module>
         <module>test-naming-start</module>
         <module>test-naming-end</module>
         <module>disabling-tests-start</module>
