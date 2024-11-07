@@ -17,5 +17,7 @@
         <module>the-project-we-are-testing</module>
         <module>testing-our-functionality-start</module>
         <module>testing-our-functionality-end</module>
+        <module>tests-project-configuration-start</module>
+        <module>tests-project-configuration-end</module>
     </modules>
 </project>
