@@ -11,6 +11,7 @@ import com.baeldung.lju.persistence.repository.WorkerRepository;
 public class InMemoryWorkerRepository implements WorkerRepository {
 
     private Set<Worker> workers;
+    private final Random random = new Random();
 
     public InMemoryWorkerRepository() {
         super();
@@ -34,7 +35,7 @@ public class InMemoryWorkerRepository implements WorkerRepository {
     public Worker save(Worker worker) {
         Long workerId = worker.getId();
         if (workerId == null) {
-            worker.setId(new Random().nextLong(Long.MAX_VALUE));
+            worker.setId(random.nextLong(Long.MAX_VALUE));
         } else {
             findById(workerId).ifPresent(workers::remove);
         }

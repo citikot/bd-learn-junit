@@ -15,6 +15,7 @@ import com.baeldung.lju.persistence.repository.TaskRepository;
 public class InMemoryTaskRepository implements TaskRepository {
 
     private Set<Task> tasks;
+    private final Random random = new Random();
 
     public InMemoryTaskRepository() {
         super();
@@ -38,7 +39,7 @@ public class InMemoryTaskRepository implements TaskRepository {
     public Task save(Task task) {
         Long taskId = task.getId();
         if (taskId == null) {
-            task.setId(new Random().nextLong(Long.MAX_VALUE));
+            task.setId(random.nextLong(Long.MAX_VALUE));
         } else {
             findById(taskId).ifPresent(tasks::remove);
         }

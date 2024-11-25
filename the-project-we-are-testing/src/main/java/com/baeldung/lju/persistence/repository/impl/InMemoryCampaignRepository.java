@@ -14,6 +14,7 @@ import com.baeldung.lju.persistence.repository.CampaignRepository;
 public class InMemoryCampaignRepository implements CampaignRepository {
 
     private Set<Campaign> campaigns;
+    private final Random random = new Random();
 
     public InMemoryCampaignRepository() {
         super();
@@ -37,7 +38,7 @@ public class InMemoryCampaignRepository implements CampaignRepository {
     public Campaign save(Campaign campaign) {
         Long campaignId = campaign.getId();
         if (campaignId == null) {
-            campaign.setId(new Random().nextLong(Long.MAX_VALUE));
+            campaign.setId(random.nextLong(Long.MAX_VALUE));
         } else {
             findById(campaignId).ifPresent(campaigns::remove);
         }

@@ -94,10 +94,18 @@ public class LjuApp {
         Map<String, Object> workerDetailedReport = reportHandler.generateWorkerReport(new DetailedMapReportBuilder(), worker.getId());
         Map<String, Object> managerSimpleReport = reportHandler.generateManagerReport(new SimpleMapReportBuilder());
         Map<String, Object> managerDetailedReport = reportHandler.generateManagerReport(new DetailedMapReportBuilder());
-        logger.info("Worker simple report: {}", formatMap(workerSimpleReport));
-        logger.info("Worker detailed report: {}", formatMap(workerDetailedReport));
-        logger.info("Manager simple report: {}", formatMap(managerSimpleReport));
-        logger.info("Manager detailed report: {}", formatMap(managerDetailedReport));
+        if(logger.isInfoEnabled()) {
+            logger.info("Worker simple report: {}", formatMap(workerSimpleReport));
+        }
+        if(logger.isInfoEnabled()) {
+            logger.info("Worker detailed report: {}", formatMap(workerDetailedReport));
+        }
+        if(logger.isInfoEnabled()) {
+            logger.info("Manager simple report: {}", formatMap(managerSimpleReport));
+        }
+        if(logger.isInfoEnabled()) {
+            logger.info("Manager detailed report: {}", formatMap(managerDetailedReport));
+        }
     }
 
     private static String formatMap(Map<String, Object> map) {
