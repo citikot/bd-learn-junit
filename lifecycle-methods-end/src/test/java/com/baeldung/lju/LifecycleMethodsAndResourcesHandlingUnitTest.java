@@ -14,7 +14,7 @@ import org.slf4j.LoggerFactory;
 
 public class LifecycleMethodsAndResourcesHandlingUnitTest {
 
-    final static Logger logger = LoggerFactory.getLogger(LifecycleMethodsAndResourcesHandlingUnitTest.class);
+    static final Logger logger = LoggerFactory.getLogger(LifecycleMethodsAndResourcesHandlingUnitTest.class);
     static BufferedReader fileReader;
 
     //    BufferedReader fileReader;
@@ -23,6 +23,7 @@ public class LifecycleMethodsAndResourcesHandlingUnitTest {
     static public void setupResource() throws Exception {
         InputStream fileStream = LifecycleMethodsAndResourcesHandlingUnitTest.class.getClassLoader()
             .getResourceAsStream("file.txt");
+        assert fileStream != null;
         fileReader = new BufferedReader(new InputStreamReader(fileStream));
 
         logger.info("static fileReader is ready: {}", fileReader.ready());

@@ -9,7 +9,7 @@ import com.baeldung.lju.persistence.repository.CampaignRepository;
 
 public class FakeCampaignRepository implements CampaignRepository {
 
-    private Campaign mockedCampaign;
+    private final Campaign mockedCampaign;
 
     public FakeCampaignRepository(Campaign mockedCampaign) {
         this.mockedCampaign = mockedCampaign;
